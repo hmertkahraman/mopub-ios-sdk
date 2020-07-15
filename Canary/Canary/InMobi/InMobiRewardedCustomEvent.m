@@ -79,7 +79,6 @@
     [InMobiAdapterConfiguration initializeInMobiSDK:accountId];
 }
 
-
 - (void)requestAdWithAdapterInfo:(NSDictionary *)info adMarkup:(NSString *)adMarkup {
     NSMutableDictionary *inMobiParameters = [NSMutableDictionary dictionaryWithDictionary:info];
     [self initializeSdkWithParameters:inMobiParameters];
