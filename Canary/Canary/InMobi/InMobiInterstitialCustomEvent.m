@@ -41,7 +41,6 @@
     return self.interstitialAd != nil;
 }
 
-// Override this method to return NO to perform impression and click tracking manually.
 - (BOOL)enableAutomaticImpressionAndClickTracking {
     return NO;
 }
@@ -92,7 +91,7 @@
     MPLogAdEvent([MPLogEvent adShowAttemptForAdapter:NSStringFromClass(self.class)],
                  [self getAdNetworkId]);
 
-    if (self.interstitialAd) {
+    if ([self hasAdAvailable]) {
         [self.interstitialAd showFromViewController:viewController withAnimation:kIMInterstitialAnimationTypeCoverVertical];
     } else {
         NSError *adNotAvailableError = [InMobiAdapterConfiguration createErrorWith:@"Failed to show InMobi Interstitial"
@@ -112,10 +111,6 @@
                  [self getAdNetworkId]);
     self.interstitialAd = interstitial;
     [self.delegate fullscreenAdAdapterDidLoadAd:self];
-}
-
--(void)interstitialDidReceiveAd:(IMInterstitial *)interstitial{
-    MPLogInfo(@"InMobi Ad Server responded with an Interstitial ad");
 }
 
 -(void)interstitial:(IMInterstitial*)interstitial didFailToLoadWithError:(IMRequestStatus*)error {
