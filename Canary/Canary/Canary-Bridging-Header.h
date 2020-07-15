@@ -15,4 +15,8 @@
 #import "InMobiRewardedCustomEvent.h"
 #import "InMobiGDPR.h"
 
+#import "OguryAdsAdapterConfiguration.h"
+#import "OguryAdsMoPubEventInterstitial.h"
+#import "OguryAdsMoPubEventOptin.h"
+
 #endif /* __Canary__Bridging_Header_h */

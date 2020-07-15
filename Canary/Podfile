@@ -50,6 +50,7 @@ else
 end
 
   pod 'InMobiSDK', '9.0.7'
+  pod 'OguryAds'
 
 # Network mediation adapters
 if Dir.exists?(mediation_path) && !use_production_mediation
