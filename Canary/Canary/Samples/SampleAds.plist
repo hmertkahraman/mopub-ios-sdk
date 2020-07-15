@@ -44,6 +44,12 @@
 		<array>
 			<dict>
 				<key>name</key>
+				<string>Ogury Interstitial</string>
+				<key>adUnitId</key>
+				<string>4e6285acb31545aa82502e6b0e411eb4</string>
+			</dict>
+			<dict>
+				<key>name</key>
 				<string>InMobi Interstitial</string>
 				<key>adUnitId</key>
 				<string>9e391ef9774a4eeba4ca4179a7a57b17</string>
@@ -68,6 +74,12 @@
 		<string>RewardedAdViewController</string>
 		<key>ad_units</key>
 		<array>
+			<dict>
+				<key>name</key>
+				<string>Ogury Rewarded Video</string>
+				<key>adUnitId</key>
+				<string>8726de92bbf94516a05e0c18e475699b</string>
+			</dict>
 			<dict>
 				<key>name</key>
 				<string>InMobi Rewarded Video</string>

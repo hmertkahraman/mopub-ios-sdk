@@ -265,7 +265,7 @@ private extension SceneDelegate {
         let sdkConfig = MPMoPubConfiguration(adUnitIdForAppInitialization: adUnitIdForConsent)
         sdkConfig.globalMediationSettings = []
         sdkConfig.loggingLevel = .debug
-        sdkConfig.additionalNetworks = [InMobiAdapterConfiguration.self]
+        sdkConfig.additionalNetworks = [InMobiAdapterConfiguration.self, OguryAdsAdapterConfiguration.self]
 
         mopub.initializeSdk(with: sdkConfig) {
             // Update the state of the menu now that the SDK has completed initialization.
