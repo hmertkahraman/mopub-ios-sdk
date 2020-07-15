@@ -20,7 +20,7 @@
 
 #import <InMobiSDK/IMSdk.h>
 
-@interface InMobiRewardedCustomEvent ()
+@interface InMobiRewardedCustomEvent () <IMInterstitialDelegate>
 
 @property (nonatomic, strong) IMInterstitial * inMobiRewardedVideoAd;
 @property (nonatomic, copy)   NSString       * placementId;
@@ -80,7 +80,10 @@
 }
 
 
-- (void)requestRewardedVideoWithCustomEventInfo:(NSDictionary *)info adMarkup:(NSString *)adMarkup {
+- (void)requestAdWithAdapterInfo:(NSDictionary *)info adMarkup:(NSString *)adMarkup {
+    NSMutableDictionary *inMobiParameters = [NSMutableDictionary dictionaryWithDictionary:info];
+    [self initializeSdkWithParameters:inMobiParameters];
+    
     MPLogAdEvent([MPLogEvent adLoadAttemptForAdapter:NSStringFromClass(self.class)
                                        dspCreativeId:nil
                                              dspName:nil], [self getAdNetworkId]);
@@ -102,7 +105,7 @@
     )
 }
 
-- (void)presentRewardedVideoFromViewController:(UIViewController *)viewController {
+- (void)presentAdFromViewController:(UIViewController *)viewController {
     if ([self hasAdAvailable]) {
         MPLogAdEvent([MPLogEvent adWillAppearForAdapter:NSStringFromClass(self.class)], [self getAdNetworkId]);
         [self.delegate fullscreenAdAdapterAdWillAppear:self];
@@ -122,10 +125,6 @@
     self.inMobiRewardedVideoAd = interstitial;
     MPLogAdEvent([MPLogEvent adLoadSuccessForAdapter:NSStringFromClass(self.class)], [self getAdNetworkId]);
     [self.delegate fullscreenAdAdapterDidLoadAd:self];
-}
-
--(void)interstitialDidReceiveAd:(IMInterstitial *)interstitial{
-    MPLogInfo(@"InMobi Ad Server responded with a Rewarded Video ad");
 }
 
 -(void)interstitial:(IMInterstitial*)interstitial didFailToLoadWithError:(IMRequestStatus*)error {
