@@ -13,7 +13,7 @@
 #import "OguryAdsAdapterConfiguration.h"
 #import <OguryAds/OguryAds.h>
 
-@interface OguryAdsMoPubEventOptin()<OguryAdsOptinVideoDelegate>
+@interface OguryAdsMoPubEventOptin() <OguryAdsOptinVideoDelegate>
 
 @property (nonatomic,strong) OguryAdsOptinVideo * oguryAdsRewardedVideo;
 @property (nonatomic, copy) NSString * oguryAdUnitId;
@@ -29,35 +29,84 @@
     return _oguryAdUnitId;
 }
 
-- (void)requestRewardedVideoWithCustomEventInfo:(NSDictionary *)info adMarkup:(NSString *)adMarkup {
-    NSString * const oguryAssetId  = info[kOguryAssetIdKey];
-    NSString * const oguryAdUnitId = info[kOguryAdUnitIdKey];
+#pragma mark - MPFullscreenAdAdapter Override
+
+- (BOOL)isRewardExpected {
+    return YES;
+}
+
+- (BOOL)hasAdAvailable {
+    return (self.oguryAdsRewardedVideo && self.oguryAdsRewardedVideo.isLoaded);
+}
+
+- (BOOL)enableAutomaticImpressionAndClickTracking
+{
+    return NO;
+}
+
+- (void)initializeSdkWithParameters:(NSDictionary *)parameters {
+    // Do not wait for the callback since this method may be run on app
+    // launch on the main thread.
+    [self initializeSdkWithParameters:parameters callback:^(NSError *error){
+        if (error) {
+            MPLogEvent([MPLogEvent error:error message:@"Ogury SDK initialization failed."]);
+        } else {
+            MPLogInfo(@"Ogury SDK initialization complete");
+        }
+    }];
+}
+
+- (void)initializeSdkWithParameters:(NSDictionary *)parameters callback:(void(^)(NSError *error))completionCallback {
+    NSString * const oguryAssetId  = parameters[kOguryAssetIdKey];
+    NSString * const oguryAdUnitId = parameters[kOguryAdUnitIdKey];
     
     NSError * oguryAssetIdError = [OguryAdsAdapterConfiguration validateParameter:oguryAssetId withName:kOguryAssetIdKey forOperation: @"rewarded video ad request"];
     if (oguryAssetIdError) {
-        [self.delegate rewardedVideoDidFailToLoadAdForCustomEvent:self error:oguryAssetIdError];
+        if (completionCallback) {
+            completionCallback(oguryAssetIdError);
+        }
         return;
     }
-
+    
     NSError * oguryAdUnitIdError = [OguryAdsAdapterConfiguration validateParameter:oguryAdUnitId withName:kOguryAdUnitIdKey forOperation: @"rewarded video ad request"];
     if (oguryAdUnitIdError) {
-        [self.delegate rewardedVideoDidFailToLoadAdForCustomEvent:self error:oguryAdUnitIdError];
-        return;
+        if (completionCallback) {
+            completionCallback(oguryAdUnitIdError);
+        }
     }
     self.oguryAdUnitId = oguryAdUnitId;
-
+    
     if (![OguryAdsAdapterConfiguration isOgurySDKInitialized]) {
         [[OguryAds shared] setupWithAssetKey:oguryAssetId andCompletionHandler:^(NSError *oguryAdsInitializationError) {
             if (oguryAdsInitializationError) {
-                [self.delegate rewardedVideoDidFailToLoadAdForCustomEvent:self error:oguryAdsInitializationError];
+                if (completionCallback) {
+                    completionCallback(oguryAdsInitializationError);
+                }
             } else {
                 [OguryAdsAdapterConfiguration setIsOgurySDKInitialized:true];
-                [self requestOguryRewardedVideo];
+                if (completionCallback) {
+                    completionCallback(nil);
+                }
             }
         }];
     } else {
-        [self requestOguryRewardedVideo];
+        if (completionCallback) {
+            completionCallback(nil);
+        }
     }
+}
+
+- (void)requestAdWithAdapterInfo:(NSDictionary *)info adMarkup:(NSString *)adMarkup {
+    NSMutableDictionary *oguryParameters = [NSMutableDictionary dictionaryWithDictionary:info];
+    [self initializeSdkWithParameters:oguryParameters callback:^(NSError *error) {
+        if (error) {
+            MPLogAdEvent([MPLogEvent adLoadFailedForAdapter:NSStringFromClass(self.class)
+                                                      error:error], [self getAdNetworkId]);
+            [self.delegate fullscreenAdAdapter:self didFailToLoadAdWithError:error];
+            return;
+        }
+        [self requestOguryRewardedVideo];
+    }];
 }
 
 - (void)requestOguryRewardedVideo {
@@ -69,26 +118,18 @@
     [self.oguryAdsRewardedVideo load];
 }
 
--(BOOL)hasAdAvailable {
-    return (self.oguryAdsRewardedVideo && self.oguryAdsRewardedVideo.isLoaded);
-}
-
-- (void)presentRewardedVideoFromViewController:(UIViewController *)viewController {
+- (void)presentAdFromViewController:(UIViewController *)viewController {
     if ([self hasAdAvailable]) {
         MPLogAdEvent([MPLogEvent adWillAppearForAdapter:NSStringFromClass(self.class)],
                      [self getAdNetworkId]);
-        [self.delegate rewardedVideoWillAppearForCustomEvent:self];
+        [self.delegate fullscreenAdAdapterAdWillAppear:self];
         [self.oguryAdsRewardedVideo showInViewController:viewController];
     } else {
         NSError *error = [NSError errorWithDomain:MoPubRewardedVideoAdsSDKDomain code:MPRewardedVideoAdErrorNoAdsAvailable userInfo:nil];
         MPLogAdEvent([MPLogEvent adShowFailedForAdapter:NSStringFromClass(self.class)
                                                   error:error], [self getAdNetworkId]);
-        [self.delegate rewardedVideoDidFailToPlayForCustomEvent:self error:error];
+        [self.delegate fullscreenAdAdapter:self didFailToShowAdWithError:error];
     }
-}
-
-- (BOOL)enableAutomaticImpressionAndClickTracking{
-    return NO;
 }
 
 - (void)handleCustomEventInvalidated{
@@ -103,23 +144,24 @@
 
 - (void)oguryAdsOptinVideoAdLoaded {
     MPLogAdEvent([MPLogEvent adLoadSuccessForAdapter:NSStringFromClass(self.class)], [self getAdNetworkId]);
-    [self.delegate rewardedVideoDidLoadAdForCustomEvent:self];
+    [self.delegate fullscreenAdAdapterDidLoadAd:self];
 }
 
 - (void)oguryAdsOptinVideoAdDisplayed {
     MPLogAdEvent([MPLogEvent adShowSuccessForAdapter:NSStringFromClass(self.class)], [self getAdNetworkId]);
     MPLogAdEvent([MPLogEvent adDidAppearForAdapter:NSStringFromClass(self.class)], [self getAdNetworkId]);
-    [self.delegate rewardedVideoDidAppearForCustomEvent:self];
-    [self.delegate trackImpression];
+    [self.delegate fullscreenAdAdapterAdDidAppear:self];
+    [self.delegate fullscreenAdAdapterDidTrackImpression:self];
+
 }
 
 - (void)oguryAdsOptinVideoAdClosed {
     MPLogAdEvent([MPLogEvent adWillDisappearForAdapter:NSStringFromClass(self.class)],
                  [self getAdNetworkId]);
-    [self.delegate rewardedVideoWillDisappearForCustomEvent:self];
+    [self.delegate fullscreenAdAdapterAdWillDisappear:self];
     MPLogAdEvent([MPLogEvent adDidDisappearForAdapter:NSStringFromClass(self.class)],
                  [self getAdNetworkId]);
-    [self.delegate rewardedVideoDidDisappearForCustomEvent:self];
+    [self.delegate fullscreenAdAdapterAdDidDisappear:self];
 }
 
 - (void)oguryAdsOptinVideoAdNotAvailable {
@@ -132,8 +174,8 @@
 
 - (void)oguryAdsOptinVideoAdError:(OguryAdsErrorType)errorType {
     if (errorType == OguryAdsErrorAdExpired) {
-        MPLogInfo(@"Ogury Interstitial has expired");
-        [self.delegate rewardedVideoDidExpireForCustomEvent:self];
+        MPLogInfo(@"Ogury rewarded video has expired");
+        [self.delegate fullscreenAdAdapterDidExpire:self];
     } else {
         MOPUBErrorCode mopubErrorCode = [OguryAdsAdapterConfiguration getMoPubErrorCodeFromOguryAdsError:errorType];
         [self oguryAdsRewardedVideoAdFailure:mopubErrorCode];
@@ -145,16 +187,15 @@
     MPLogAdEvent([MPLogEvent adLoadFailedForAdapter:NSStringFromClass(self.class) error:(NSError*)error],
                  [self getAdNetworkId]);
     self.oguryAdsRewardedVideo = nil;
-    [self.delegate rewardedVideoDidFailToLoadAdForCustomEvent:self error:error];
+    [self.delegate fullscreenAdAdapter:self didFailToLoadAdWithError:error];
 }
 
 - (void)oguryAdsOptinVideoAdRewarded:(OGARewardItem *)item {
     if (item) {
-        MPRewardedVideoReward *reward = [[MPRewardedVideoReward alloc]
-                                         initWithCurrencyType:item.rewardName
-                                         amount:@([item.rewardValue floatValue])];
+        MPReward *reward = [[MPReward alloc] initWithCurrencyType:item.rewardName amount:@([item.rewardValue floatValue])];
+        [self.delegate fullscreenAdAdapter:self willRewardUser:reward];
         MPLogInfo(@"Ogury reward action completed with rewards: %@", [reward description]);
-        [self.delegate rewardedVideoShouldRewardUserForCustomEvent:self reward:reward];
+
     } else {
         MPLogInfo(@"Ogury reward action failed, rewards object is empty");
     }
