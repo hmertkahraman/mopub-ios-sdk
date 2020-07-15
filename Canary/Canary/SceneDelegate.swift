@@ -267,6 +267,20 @@ private extension SceneDelegate {
         sdkConfig.loggingLevel = .debug
         sdkConfig.additionalNetworks = [InMobiAdapterConfiguration.self, OguryAdsAdapterConfiguration.self]
 
+        var mediatedNetworkConfigurationsDict = NSMutableDictionary()
+        // Ogury Config
+        var oguryConfig = NSMutableDictionary()
+        oguryConfig.setValue("b5a16f60-6c43-0138-e7b9-0242ac120004_test", forKey: "ad_unit_id")
+        oguryConfig.setValue("OGY-8286EB748564", forKey: "asset_key")
+        mediatedNetworkConfigurationsDict.setValue(oguryConfig, forKey: OguryAdsAdapterConfiguration.className())
+
+        // InMobi Config
+        var inMobiConfig = NSMutableDictionary()
+        inMobiConfig.setValue("1586616590589", forKey: "placementid")
+        inMobiConfig.setValue("5834527aa5a3477e944e321234985600", forKey: "accountid")
+        mediatedNetworkConfigurationsDict.setValue(inMobiConfig, forKey: InMobiAdapterConfiguration.className())
+
+        sdkConfig.mediatedNetworkConfigurations = mediatedNetworkConfigurationsDict
         mopub.initializeSdk(with: sdkConfig) {
             // Update the state of the menu now that the SDK has completed initialization.
             if let menuController = containerViewController.menuViewController {
