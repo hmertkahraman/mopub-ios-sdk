@@ -264,8 +264,9 @@ private extension SceneDelegate {
         // MoPub SDK initialization
         let sdkConfig = MPMoPubConfiguration(adUnitIdForAppInitialization: adUnitIdForConsent)
         sdkConfig.globalMediationSettings = []
-        sdkConfig.loggingLevel = .info
-        
+        sdkConfig.loggingLevel = .debug
+        sdkConfig.additionalNetworks = [InMobiAdapterConfiguration.self]
+
         mopub.initializeSdk(with: sdkConfig) {
             // Update the state of the menu now that the SDK has completed initialization.
             if let menuController = containerViewController.menuViewController {

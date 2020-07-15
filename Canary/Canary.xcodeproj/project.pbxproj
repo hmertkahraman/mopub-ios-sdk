@@ -238,6 +238,36 @@
 		ECF218162278D9A4008BD940 /* OrderPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF218142278D9A4008BD940 /* OrderPreferenceViewController.swift */; };
 		ECF2181D227900C2008BD940 /* NativeAdRendererManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2181C227900C2008BD940 /* NativeAdRendererManager.swift */; };
 		ECF2181E227900C2008BD940 /* NativeAdRendererManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2181C227900C2008BD940 /* NativeAdRendererManager.swift */; };
+		F28EDA5B24BF49380013F7BC /* InMobiRewardedCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5124BF49380013F7BC /* InMobiRewardedCustomEvent.m */; };
+		F28EDA5C24BF49380013F7BC /* InMobiRewardedCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5124BF49380013F7BC /* InMobiRewardedCustomEvent.m */; };
+		F28EDA5D24BF49380013F7BC /* InMobiRewardedCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5124BF49380013F7BC /* InMobiRewardedCustomEvent.m */; };
+		F28EDA5E24BF49380013F7BC /* InMobiRewardedCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5124BF49380013F7BC /* InMobiRewardedCustomEvent.m */; };
+		F28EDA5F24BF49380013F7BC /* InMobiRewardedCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5124BF49380013F7BC /* InMobiRewardedCustomEvent.m */; };
+		F28EDA6024BF49380013F7BC /* InMobiInterstitialCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5224BF49380013F7BC /* InMobiInterstitialCustomEvent.m */; };
+		F28EDA6124BF49380013F7BC /* InMobiInterstitialCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5224BF49380013F7BC /* InMobiInterstitialCustomEvent.m */; };
+		F28EDA6224BF49380013F7BC /* InMobiInterstitialCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5224BF49380013F7BC /* InMobiInterstitialCustomEvent.m */; };
+		F28EDA6324BF49380013F7BC /* InMobiInterstitialCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5224BF49380013F7BC /* InMobiInterstitialCustomEvent.m */; };
+		F28EDA6424BF49380013F7BC /* InMobiInterstitialCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5224BF49380013F7BC /* InMobiInterstitialCustomEvent.m */; };
+		F28EDA6524BF49380013F7BC /* InMobiGDPR.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5424BF49380013F7BC /* InMobiGDPR.m */; };
+		F28EDA6624BF49380013F7BC /* InMobiGDPR.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5424BF49380013F7BC /* InMobiGDPR.m */; };
+		F28EDA6724BF49380013F7BC /* InMobiGDPR.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5424BF49380013F7BC /* InMobiGDPR.m */; };
+		F28EDA6824BF49380013F7BC /* InMobiGDPR.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5424BF49380013F7BC /* InMobiGDPR.m */; };
+		F28EDA6924BF49380013F7BC /* InMobiGDPR.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5424BF49380013F7BC /* InMobiGDPR.m */; };
+		F28EDA6A24BF49380013F7BC /* InMobiBannerCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5624BF49380013F7BC /* InMobiBannerCustomEvent.m */; };
+		F28EDA6B24BF49380013F7BC /* InMobiBannerCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5624BF49380013F7BC /* InMobiBannerCustomEvent.m */; };
+		F28EDA6C24BF49380013F7BC /* InMobiBannerCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5624BF49380013F7BC /* InMobiBannerCustomEvent.m */; };
+		F28EDA6D24BF49380013F7BC /* InMobiBannerCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5624BF49380013F7BC /* InMobiBannerCustomEvent.m */; };
+		F28EDA6E24BF49380013F7BC /* InMobiBannerCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5624BF49380013F7BC /* InMobiBannerCustomEvent.m */; };
+		F28EDA6F24BF49380013F7BC /* InMobiAdapterConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5724BF49380013F7BC /* InMobiAdapterConfiguration.m */; };
+		F28EDA7024BF49380013F7BC /* InMobiAdapterConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5724BF49380013F7BC /* InMobiAdapterConfiguration.m */; };
+		F28EDA7124BF49380013F7BC /* InMobiAdapterConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5724BF49380013F7BC /* InMobiAdapterConfiguration.m */; };
+		F28EDA7224BF49380013F7BC /* InMobiAdapterConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5724BF49380013F7BC /* InMobiAdapterConfiguration.m */; };
+		F28EDA7324BF49380013F7BC /* InMobiAdapterConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5724BF49380013F7BC /* InMobiAdapterConfiguration.m */; };
+		F28EDA7424BF49380013F7BC /* CHANGELOG.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28EDA5924BF49380013F7BC /* CHANGELOG.txt */; };
+		F28EDA7524BF49380013F7BC /* CHANGELOG.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28EDA5924BF49380013F7BC /* CHANGELOG.txt */; };
+		F28EDA7624BF49380013F7BC /* CHANGELOG.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28EDA5924BF49380013F7BC /* CHANGELOG.txt */; };
+		F28EDA7724BF49380013F7BC /* CHANGELOG.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28EDA5924BF49380013F7BC /* CHANGELOG.txt */; };
+		F28EDA7824BF49380013F7BC /* CHANGELOG.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28EDA5924BF49380013F7BC /* CHANGELOG.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -435,6 +465,18 @@
 		ECF218112278D5B8008BD940 /* NativeAdRendererMenuDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAdRendererMenuDataSource.swift; sourceTree = "<group>"; };
 		ECF218142278D9A4008BD940 /* OrderPreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPreferenceViewController.swift; sourceTree = "<group>"; };
 		ECF2181C227900C2008BD940 /* NativeAdRendererManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAdRendererManager.swift; sourceTree = "<group>"; };
+		F216A91924BF4B4000BF8C93 /* Canary-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Canary-Bridging-Header.h"; sourceTree = "<group>"; };
+		F28EDA5024BF49380013F7BC /* InMobiBannerCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InMobiBannerCustomEvent.h; sourceTree = "<group>"; };
+		F28EDA5124BF49380013F7BC /* InMobiRewardedCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InMobiRewardedCustomEvent.m; sourceTree = "<group>"; };
+		F28EDA5224BF49380013F7BC /* InMobiInterstitialCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InMobiInterstitialCustomEvent.m; sourceTree = "<group>"; };
+		F28EDA5324BF49380013F7BC /* InMobiAdapterConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InMobiAdapterConfiguration.h; sourceTree = "<group>"; };
+		F28EDA5424BF49380013F7BC /* InMobiGDPR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InMobiGDPR.m; sourceTree = "<group>"; };
+		F28EDA5524BF49380013F7BC /* InMobiRewardedCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InMobiRewardedCustomEvent.h; sourceTree = "<group>"; };
+		F28EDA5624BF49380013F7BC /* InMobiBannerCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InMobiBannerCustomEvent.m; sourceTree = "<group>"; };
+		F28EDA5724BF49380013F7BC /* InMobiAdapterConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InMobiAdapterConfiguration.m; sourceTree = "<group>"; };
+		F28EDA5824BF49380013F7BC /* InMobiInterstitialCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InMobiInterstitialCustomEvent.h; sourceTree = "<group>"; };
+		F28EDA5924BF49380013F7BC /* CHANGELOG.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.txt; sourceTree = "<group>"; };
+		F28EDA5A24BF49380013F7BC /* InMobiGDPR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InMobiGDPR.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -582,6 +624,7 @@
 				BC7892E8220B9C22007A6218 /* AccessibilityIdentifier.swift */,
 				BC4FE3052208C57A00B5D240 /* AdapterVersions */,
 				BC33E0361FBB627B0060ECBE /* AppDelegate.swift */,
+				F28EDA4F24BF49380013F7BC /* InMobi */,
 				BC33E03F1FBB627B0060ECBE /* Assets.xcassets */,
 				BC04944520F911C900CFD9C2 /* Base */,
 				BCFE5B391FE4469D00D760E9 /* Cells */,
@@ -603,6 +646,7 @@
 				BCFE5B3D1FE44F6D00D760E9 /* Samples */,
 				B275DB2B200FD5F500F053F8 /* SavedAds */,
 				EC799949230F8C1500589ED4 /* SceneDelegate.swift */,
+				F216A91924BF4B4000BF8C93 /* Canary-Bridging-Header.h */,
 				BC04945920F91C9E00CFD9C2 /* StoryboardInstantiable.swift */,
 				BCB4DF33211CD970005BD171 /* TableViewCellRegisterable.swift */,
 				EC469C06226006FC006CABAA /* Utility */,
@@ -923,6 +967,24 @@
 			path = Renderer;
 			sourceTree = "<group>";
 		};
+		F28EDA4F24BF49380013F7BC /* InMobi */ = {
+			isa = PBXGroup;
+			children = (
+				F28EDA5024BF49380013F7BC /* InMobiBannerCustomEvent.h */,
+				F28EDA5124BF49380013F7BC /* InMobiRewardedCustomEvent.m */,
+				F28EDA5224BF49380013F7BC /* InMobiInterstitialCustomEvent.m */,
+				F28EDA5324BF49380013F7BC /* InMobiAdapterConfiguration.h */,
+				F28EDA5724BF49380013F7BC /* InMobiAdapterConfiguration.m */,
+				F28EDA5424BF49380013F7BC /* InMobiGDPR.m */,
+				F28EDA5524BF49380013F7BC /* InMobiRewardedCustomEvent.h */,
+				F28EDA5624BF49380013F7BC /* InMobiBannerCustomEvent.m */,
+				F28EDA5824BF49380013F7BC /* InMobiInterstitialCustomEvent.h */,
+				F28EDA5924BF49380013F7BC /* CHANGELOG.txt */,
+				F28EDA5A24BF49380013F7BC /* InMobiGDPR.h */,
+			);
+			path = InMobi;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1086,6 +1148,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F28EDA7624BF49380013F7BC /* CHANGELOG.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1106,6 +1169,7 @@
 				BC4CE2A2213733EB00CA0220 /* NativeAdCollectionViewController.xib in Resources */,
 				BCFE5B3B1FE446D600D760E9 /* AdUnitTableViewCell.xib in Resources */,
 				BC33E03E1FBB627B0060ECBE /* Main.storyboard in Resources */,
+				F28EDA7424BF49380013F7BC /* CHANGELOG.txt in Resources */,
 				BC4CE299213604DA00CA0220 /* NativeAdTableViewController.xib in Resources */,
 				BCB4DF31211CC27D005BD171 /* StatusTableViewCell.xib in Resources */,
 				BCF7095F1FBCCF50009A3981 /* SampleAds.plist in Resources */,
@@ -1132,6 +1196,7 @@
 				BCFE5B3C1FE446D600D760E9 /* AdUnitTableViewCell.xib in Resources */,
 				BCF6F7E421752DDF00FDE594 /* ReleaseTestingAds.plist in Resources */,
 				BC4CE29A213604DA00CA0220 /* NativeAdTableViewController.xib in Resources */,
+				F28EDA7524BF49380013F7BC /* CHANGELOG.txt in Resources */,
 				BCB4DF32211CC27D005BD171 /* StatusTableViewCell.xib in Resources */,
 				BC33E0531FBB63260060ECBE /* Main.storyboard in Resources */,
 				BC96A34120AE335C00AC3266 /* BasicMenuTableViewCell.xib in Resources */,
@@ -1145,6 +1210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F28EDA7724BF49380013F7BC /* CHANGELOG.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1152,6 +1218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F28EDA7824BF49380013F7BC /* CHANGELOG.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1209,8 +1276,6 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Internal Application/Pods-Internal Application-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Flurry-iOS-SDK/Flurry_iOS_SDK.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/LoremIpsum/LoremIpsum.framework",
 				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
@@ -1236,8 +1301,6 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Flurry_iOS_SDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LoremIpsum.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
@@ -1273,8 +1336,6 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AppStore Application/Pods-AppStore Application-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Flurry-iOS-SDK/Flurry_iOS_SDK.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/LoremIpsum/LoremIpsum.framework",
 				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
@@ -1300,8 +1361,6 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Flurry_iOS_SDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LoremIpsum.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
@@ -1337,9 +1396,9 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Internal Application/Pods-Internal Application-resources.sh",
-				"${PODS_ROOT}/AppLovinSDK/applovin-ios-sdk-6.11.6/AppLovinSDKResources.bundle",
-				"${PODS_ROOT}/TapjoySDK/TapjoySDK_iOS_v12.4.2/Libraries/Tapjoy.embeddedframework/Resources/TapjoyResources.bundle",
-				"${PODS_ROOT}/TapjoySDK/TapjoySDK_iOS_v12.4.2/Libraries/Tapjoy.embeddedframework/Tapjoy.framework/Versions/A/Resources/TapjoyResources.bundle",
+				"${PODS_ROOT}/AppLovinSDK/applovin-ios-sdk-6.13.1/AppLovinSDKResources.bundle",
+				"${PODS_ROOT}/TapjoySDK/TapjoySDK_iOS_v12.6.0/Libraries/Tapjoy.embeddedframework/Resources/TapjoyResources.bundle",
+				"${PODS_ROOT}/TapjoySDK/TapjoySDK_iOS_v12.6.0/Libraries/Tapjoy.embeddedframework/Tapjoy.framework/Versions/A/Resources/TapjoyResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -1358,9 +1417,9 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AppStore Application/Pods-AppStore Application-resources.sh",
-				"${PODS_ROOT}/AppLovinSDK/applovin-ios-sdk-6.11.6/AppLovinSDKResources.bundle",
-				"${PODS_ROOT}/TapjoySDK/TapjoySDK_iOS_v12.4.2/Libraries/Tapjoy.embeddedframework/Resources/TapjoyResources.bundle",
-				"${PODS_ROOT}/TapjoySDK/TapjoySDK_iOS_v12.4.2/Libraries/Tapjoy.embeddedframework/Tapjoy.framework/Versions/A/Resources/TapjoyResources.bundle",
+				"${PODS_ROOT}/AppLovinSDK/applovin-ios-sdk-6.13.1/AppLovinSDKResources.bundle",
+				"${PODS_ROOT}/TapjoySDK/TapjoySDK_iOS_v12.6.0/Libraries/Tapjoy.embeddedframework/Resources/TapjoyResources.bundle",
+				"${PODS_ROOT}/TapjoySDK/TapjoySDK_iOS_v12.6.0/Libraries/Tapjoy.embeddedframework/Tapjoy.framework/Versions/A/Resources/TapjoyResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -1402,10 +1461,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC728C7E233563BA0020AEBD /* XCTestCase+Waiting.swift in Sources */,
+				F28EDA6224BF49380013F7BC /* InMobiInterstitialCustomEvent.m in Sources */,
 				BC7892EB220CB896007A6218 /* AccessibilityIdentifier.swift in Sources */,
+				F28EDA6724BF49380013F7BC /* InMobiGDPR.m in Sources */,
 				EC728C7F233563BA0020AEBD /* SnapshotHelper.swift in Sources */,
+				F28EDA7124BF49380013F7BC /* InMobiAdapterConfiguration.m in Sources */,
+				F28EDA6C24BF49380013F7BC /* InMobiBannerCustomEvent.m in Sources */,
 				EC728C7D233563BA0020AEBD /* Screenshot.swift in Sources */,
 				EC478D33233533A2000B3397 /* CallbackFunctionNames.swift in Sources */,
+				F28EDA5D24BF49380013F7BC /* InMobiRewardedCustomEvent.m in Sources */,
 				EC728C81233563BA0020AEBD /* CanaryScreenshots.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1426,6 +1490,7 @@
 				BC4CE2A52137343C00CA0220 /* NativeAdCollectionDataSource.swift in Sources */,
 				BC525EE32130A61D007B1761 /* BaseNativeAdDataSource.swift in Sources */,
 				BCE7078920B34C7A00DA4BCB /* MPConsentStatus+Description.swift in Sources */,
+				F28EDA6524BF49380013F7BC /* InMobiGDPR.m in Sources */,
 				BC01F6502004191400D6898B /* InterstitialAdViewController.swift in Sources */,
 				BCFE5B431FE84B5200D760E9 /* BannerAdViewController.swift in Sources */,
 				BC01F65320042BD600D6898B /* RewardedAdViewController.swift in Sources */,
@@ -1434,6 +1499,7 @@
 				BC33E03B1FBB627B0060ECBE /* SavedAdsViewController.swift in Sources */,
 				ECF218042278AE94008BD940 /* Array+Sort.swift in Sources */,
 				BCE7078620B34C3400DA4BCB /* MPBool+Description.swift in Sources */,
+				F28EDA6A24BF49380013F7BC /* InMobiBannerCustomEvent.m in Sources */,
 				BC525ED7212F50E3007B1761 /* RewardedAdDataSource.swift in Sources */,
 				BCA042E9211E004D001B1AF5 /* AdActionsTableViewCell.swift in Sources */,
 				2A1F52F422160A0300933277 /* ManualEntryInterfaceViewController.swift in Sources */,
@@ -1442,6 +1508,7 @@
 				BCFE5B371FE4469200D760E9 /* AdUnitTableViewCell.swift in Sources */,
 				BC647D9A20F967C800FAA12C /* BaseSplitViewController.swift in Sources */,
 				EC32525E225276F500D955C3 /* NSObject+Utility.swift in Sources */,
+				F28EDA5B24BF49380013F7BC /* InMobiRewardedCustomEvent.m in Sources */,
 				BC5F73602220AF6800EED041 /* FilterableAdUnitTableViewController.swift in Sources */,
 				EC3C659A232020E200D2E15D /* CallbackFunctionNames.swift in Sources */,
 				B275DB2D200FD64000F053F8 /* SavedAdsDataSource.swift in Sources */,
@@ -1460,6 +1527,7 @@
 				BC3B0C982007DBAA002D28B1 /* TweetCollectionViewCell.swift in Sources */,
 				EC325259225273AD00D955C3 /* TextAndToggleTableViewCell.swift in Sources */,
 				BC59F25D20F524E40051DA00 /* AdUnitDataSource.swift in Sources */,
+				F28EDA6F24BF49380013F7BC /* InMobiAdapterConfiguration.m in Sources */,
 				BCB4DF28211CB62F005BD171 /* AdTableViewController.swift in Sources */,
 				BC33E0391FBB627B0060ECBE /* SampleAdsViewController.swift in Sources */,
 				EC79994A230F8C1500589ED4 /* SceneDelegate.swift in Sources */,
@@ -1484,6 +1552,7 @@
 				BCB4DF25211B913F005BD171 /* AdDataSource.swift in Sources */,
 				BC7892E9220B9C22007A6218 /* AccessibilityIdentifier.swift in Sources */,
 				BCB4DF2E211CC265005BD171 /* StatusTableViewCell.swift in Sources */,
+				F28EDA6024BF49380013F7BC /* InMobiInterstitialCustomEvent.m in Sources */,
 				EC32526422527BCB00D955C3 /* UITableView+Utility.swift in Sources */,
 				BC96A33D20AE32DB00AC3266 /* BasicMenuTableViewCell.swift in Sources */,
 			);
@@ -1521,6 +1590,7 @@
 				BCA042EA211E004D001B1AF5 /* AdActionsTableViewCell.swift in Sources */,
 				BC3B0C962007DAA5002D28B1 /* NativeAdCollectionViewController.swift in Sources */,
 				EC325253224ED56F00D955C3 /* UserDefaults+Subscript.swift in Sources */,
+				F28EDA6124BF49380013F7BC /* InMobiInterstitialCustomEvent.m in Sources */,
 				2A49E2002298766C0049B61B /* TestingMenuDataSource.swift in Sources */,
 				ECF218162278D9A4008BD940 /* OrderPreferenceViewController.swift in Sources */,
 				BC713BB121700C9B003655B2 /* ReleaseTestingViewController.swift in Sources */,
@@ -1530,6 +1600,7 @@
 				B275DB2E200FD64000F053F8 /* SavedAdsDataSource.swift in Sources */,
 				BCEB5DA72008270300FE5165 /* CGFloat+Random.swift in Sources */,
 				BC713BAE21700BBC003655B2 /* ReleaseTestingSplitViewController.swift in Sources */,
+				F28EDA7024BF49380013F7BC /* InMobiAdapterConfiguration.m in Sources */,
 				BC003AFE20DC42FE00CD1FEB /* LogingLevelMenuDataSource.swift in Sources */,
 				BC525EEA2135BA4E007B1761 /* PreferredWidthLabel.swift in Sources */,
 				2A35FAAC21B5DA6200DC8805 /* QRCodeCameraInterfaceViewController.swift in Sources */,
@@ -1553,6 +1624,7 @@
 				BC33E04D1FBB63260060ECBE /* AppDelegate.swift in Sources */,
 				BCB63FE320AA442B00C22C7F /* MenuDataSource.swift in Sources */,
 				BC04945420F91BFC00CFD9C2 /* NetworkAdsViewController.swift in Sources */,
+				F28EDA6B24BF49380013F7BC /* InMobiBannerCustomEvent.m in Sources */,
 				EC32526522527BCB00D955C3 /* UITableView+Utility.swift in Sources */,
 				BCA042F3211E15FB001B1AF5 /* BannerAdDataSource.swift in Sources */,
 				2A49E20222987B530049B61B /* SafeAreaTestViewController.swift in Sources */,
@@ -1568,7 +1640,9 @@
 				EC32525F225276F500D955C3 /* NSObject+Utility.swift in Sources */,
 				BCD0506D2003F20400FFC36D /* UIView+Nib.swift in Sources */,
 				BC3B0C932006E168002D28B1 /* NativeAdTableViewController.swift in Sources */,
+				F28EDA5C24BF49380013F7BC /* InMobiRewardedCustomEvent.m in Sources */,
 				BC33E04E1FBB63260060ECBE /* SampleAdsViewController.swift in Sources */,
+				F28EDA6624BF49380013F7BC /* InMobiGDPR.m in Sources */,
 				EC79994B230F8C1500589ED4 /* SceneDelegate.swift in Sources */,
 				BC4CE2A02136FB6100CA0220 /* AdViewController.swift in Sources */,
 				BC3B0C8D20058D7C002D28B1 /* NativeAdView.swift in Sources */,
@@ -1584,6 +1658,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC728C73233561B10020AEBD /* MoPubBaseTestCase.swift in Sources */,
+				F28EDA6D24BF49380013F7BC /* InMobiBannerCustomEvent.m in Sources */,
 				EC728C70233561B10020AEBD /* RewardedRichMediaTests.swift in Sources */,
 				EC728C72233561B10020AEBD /* HTMLInterstitialAdTests.swift in Sources */,
 				EC478D352335363D000B3397 /* CallbackFunctionNames.swift in Sources */,
@@ -1594,8 +1669,11 @@
 				EC85D08A23BFE87900D5E72F /* RewardedVideoTests.swift in Sources */,
 				305A5C9E23C664B700A7A31B /* ReleaseMoPubBanners.swift in Sources */,
 				EC728C67233561B10020AEBD /* AdDetailPage.swift in Sources */,
+				F28EDA7224BF49380013F7BC /* InMobiAdapterConfiguration.m in Sources */,
 				EC728C66233561B10020AEBD /* SafariApp.swift in Sources */,
+				F28EDA6824BF49380013F7BC /* InMobiGDPR.m in Sources */,
 				EC728C65233561B10020AEBD /* AdListPage.swift in Sources */,
+				F28EDA5E24BF49380013F7BC /* InMobiRewardedCustomEvent.m in Sources */,
 				EC728C6B233561B10020AEBD /* NativeVideoAdTests.swift in Sources */,
 				EC728C75233561B10020AEBD /* XCUIElement+Utility.swift in Sources */,
 				30CA81CD23DF687F0023ABEE /* ReleaseMoPubFullscreen.swift in Sources */,
@@ -1605,6 +1683,7 @@
 				EC728C64233561B10020AEBD /* BannerAdLabels.swift in Sources */,
 				EC728C68233561B10020AEBD /* IPhoneHome.swift in Sources */,
 				EC728C71233561B10020AEBD /* NativeAdTests.swift in Sources */,
+				F28EDA6324BF49380013F7BC /* InMobiInterstitialCustomEvent.m in Sources */,
 				EC728C6A233561B10020AEBD /* NativeVideoTableTests.swift in Sources */,
 				EC728C6D233561B10020AEBD /* HTMLBannerAdTests.swift in Sources */,
 			);
@@ -1617,7 +1696,12 @@
 				EC469C1D22614639006CABAA /* SavedAdsManagerTests.swift in Sources */,
 				ECF218072278B274008BD940 /* ArraySortExtensionTests.swift in Sources */,
 				EC0BF26F2279EBF0003DB141 /* NativeAdRendererManagerTests.swift in Sources */,
+				F28EDA7324BF49380013F7BC /* InMobiAdapterConfiguration.m in Sources */,
+				F28EDA6424BF49380013F7BC /* InMobiInterstitialCustomEvent.m in Sources */,
+				F28EDA5F24BF49380013F7BC /* InMobiRewardedCustomEvent.m in Sources */,
+				F28EDA6E24BF49380013F7BC /* InMobiBannerCustomEvent.m in Sources */,
 				EC478D37233537A6000B3397 /* CallbackFunctionNameTests.swift in Sources */,
+				F28EDA6924BF49380013F7BC /* InMobiGDPR.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1824,6 +1908,7 @@
 				INFOPLIST_FILE = Canary/Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mopub.Canary;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/$(PROJECT_NAME)-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1841,6 +1926,7 @@
 				INFOPLIST_FILE = Canary/Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mopub.Canary;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/$(PROJECT_NAME)-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";

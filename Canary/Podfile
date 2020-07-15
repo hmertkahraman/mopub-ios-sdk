@@ -49,6 +49,8 @@ else
 	pod 'mopub-ios-sdk', :path => '../'
 end
 
+  pod 'InMobiSDK', '9.0.7'
+
 # Network mediation adapters
 if Dir.exists?(mediation_path) && !use_production_mediation
     # Use local mediation adapters first if available
@@ -56,7 +58,7 @@ if Dir.exists?(mediation_path) && !use_production_mediation
     pod 'MoPub-AdMob-Adapters', :path => mediation_path
     pod 'MoPub-Applovin-Adapters', :path => mediation_path
     pod 'MoPub-Chartboost-Adapters', :path => mediation_path
-    pod 'MoPub-FacebookAudienceNetwork-Adapters', :path => mediation_path
+    #pod 'MoPub-FacebookAudienceNetwork-Adapters', :path => mediation_path
     pod 'MoPub-IronSource-Adapters', :path => mediation_path
     pod 'MoPub-Mintegral-Adapters', :path => mediation_path
     pod 'MoPub-TapJoy-Adapters', :path => mediation_path
@@ -74,7 +76,7 @@ elsif mediation_remote != nil && !mediation_remote.to_s.empty? && !use_productio
     pod 'MoPub-AdMob-Adapters', :git => mediation_remote, :branch => branch
     pod 'MoPub-Applovin-Adapters', :git => mediation_remote, :branch => branch
     pod 'MoPub-Chartboost-Adapters', :git => mediation_remote, :branch => branch
-    pod 'MoPub-FacebookAudienceNetwork-Adapters', :git => mediation_remote, :branch => branch
+    #pod 'MoPub-FacebookAudienceNetwork-Adapters', :git => mediation_remote, :branch => branch
     pod 'MoPub-IronSource-Adapters', :git => mediation_remote, :branch => branch
     pod 'MoPub-Mintegral-Adapters', :git => mediation_remote, :branch => branch
     pod 'MoPub-TapJoy-Adapters', :git => mediation_remote, :branch => branch
@@ -87,7 +89,7 @@ else
     pod 'MoPub-AdMob-Adapters'
     pod 'MoPub-Applovin-Adapters'
     pod 'MoPub-Chartboost-Adapters'
-    pod 'MoPub-FacebookAudienceNetwork-Adapters'
+    #pod 'MoPub-FacebookAudienceNetwork-Adapters'
     pod 'MoPub-IronSource-Adapters'
     pod 'MoPub-Mintegral-Adapters'
     pod 'MoPub-TapJoy-Adapters'

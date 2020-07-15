@@ -16,6 +16,12 @@
 			</dict>
 			<dict>
 				<key>name</key>
+				<string>InMobi Banner</string>
+				<key>adUnitId</key>
+				<string>f8a38165d0354972b7ef8aae7ecfd2e7</string>
+			</dict>
+			<dict>
+				<key>name</key>
 				<string>MRAID Banner</string>
 				<key>adUnitId</key>
 				<string>ef078b27e11c49bbb87080617a69b970</string>
@@ -36,6 +42,12 @@
 		<string>InterstitialAdViewController</string>
 		<key>ad_units</key>
 		<array>
+			<dict>
+				<key>name</key>
+				<string>InMobi Interstitial</string>
+				<key>adUnitId</key>
+				<string>9e391ef9774a4eeba4ca4179a7a57b17</string>
+			</dict>
 			<dict>
 				<key>name</key>
 				<string>HTML Interstitial</string>
@@ -62,6 +74,7 @@
 				<key>adUnitId</key>
 				<string>8f000bd5e00246de9c789eed39ff6096</string>
 			</dict>
+			<string>InMobi Rewarded Video</string>
 			<dict>
 				<key>name</key>
 				<string>Rewarded Rich Media</string>

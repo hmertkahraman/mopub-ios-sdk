@@ -9,7 +9,6 @@
 import Foundation
 import MoPub
 import MoPub_AdMob_Adapters
-import MoPub_FacebookAudienceNetwork_Adapters
 import MoPub_Mintegral_Adapters
 import MoPub_Verizon_Adapters
 
@@ -128,7 +127,6 @@ private extension NativeAdRendererManager {
             renderers.append(admobConfig)
         }
         
-        renderers.append(FacebookNativeAdRenderer.rendererConfiguration(with: mopubRendererSettings))
         
         // OPTIONAL: Verizon native video renderer
         if let verizonConfig = MPVerizonNativeAdRenderer.rendererConfiguration(with: mopubVideoRendererSettings) {
