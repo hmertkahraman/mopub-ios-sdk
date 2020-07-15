@@ -151,9 +151,7 @@
 // -- Unsupported by MoPub --
 // No rewards on Banners
 -(void)banner:(IMBanner*)banner rewardActionCompletedWithRewards:(NSDictionary*)rewards {
-    if (rewards != nil) {
-        MPLogInfo(@"InMobi banner reward action completed with rewards: %@", [rewards description]);
-    }
+    // No-op
 }
 
 @end
