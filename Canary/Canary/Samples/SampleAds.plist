@@ -70,11 +70,16 @@
 		<array>
 			<dict>
 				<key>name</key>
+				<string>InMobi Rewarded Video</string>
+				<key>adUnitId</key>
+				<string>a1e8c68296674d60bdfca9dd7f8b0cfd</string>
+			</dict>
+			<dict>
+				<key>name</key>
 				<string>Rewarded Video</string>
 				<key>adUnitId</key>
 				<string>8f000bd5e00246de9c789eed39ff6096</string>
 			</dict>
-			<string>InMobi Rewarded Video</string>
 			<dict>
 				<key>name</key>
 				<string>Rewarded Rich Media</string>

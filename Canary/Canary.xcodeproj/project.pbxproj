@@ -238,6 +238,11 @@
 		ECF218162278D9A4008BD940 /* OrderPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF218142278D9A4008BD940 /* OrderPreferenceViewController.swift */; };
 		ECF2181D227900C2008BD940 /* NativeAdRendererManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2181C227900C2008BD940 /* NativeAdRendererManager.swift */; };
 		ECF2181E227900C2008BD940 /* NativeAdRendererManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2181C227900C2008BD940 /* NativeAdRendererManager.swift */; };
+		F216A91B24BF61B400BF8C93 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = F216A91A24BF61B400BF8C93 /* CHANGELOG.md */; };
+		F216A91C24BF61B400BF8C93 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = F216A91A24BF61B400BF8C93 /* CHANGELOG.md */; };
+		F216A91D24BF61B400BF8C93 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = F216A91A24BF61B400BF8C93 /* CHANGELOG.md */; };
+		F216A91E24BF61B400BF8C93 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = F216A91A24BF61B400BF8C93 /* CHANGELOG.md */; };
+		F216A91F24BF61B400BF8C93 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = F216A91A24BF61B400BF8C93 /* CHANGELOG.md */; };
 		F28EDA5B24BF49380013F7BC /* InMobiRewardedCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5124BF49380013F7BC /* InMobiRewardedCustomEvent.m */; };
 		F28EDA5C24BF49380013F7BC /* InMobiRewardedCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5124BF49380013F7BC /* InMobiRewardedCustomEvent.m */; };
 		F28EDA5D24BF49380013F7BC /* InMobiRewardedCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5124BF49380013F7BC /* InMobiRewardedCustomEvent.m */; };
@@ -263,11 +268,6 @@
 		F28EDA7124BF49380013F7BC /* InMobiAdapterConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5724BF49380013F7BC /* InMobiAdapterConfiguration.m */; };
 		F28EDA7224BF49380013F7BC /* InMobiAdapterConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5724BF49380013F7BC /* InMobiAdapterConfiguration.m */; };
 		F28EDA7324BF49380013F7BC /* InMobiAdapterConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = F28EDA5724BF49380013F7BC /* InMobiAdapterConfiguration.m */; };
-		F28EDA7424BF49380013F7BC /* CHANGELOG.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28EDA5924BF49380013F7BC /* CHANGELOG.txt */; };
-		F28EDA7524BF49380013F7BC /* CHANGELOG.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28EDA5924BF49380013F7BC /* CHANGELOG.txt */; };
-		F28EDA7624BF49380013F7BC /* CHANGELOG.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28EDA5924BF49380013F7BC /* CHANGELOG.txt */; };
-		F28EDA7724BF49380013F7BC /* CHANGELOG.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28EDA5924BF49380013F7BC /* CHANGELOG.txt */; };
-		F28EDA7824BF49380013F7BC /* CHANGELOG.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28EDA5924BF49380013F7BC /* CHANGELOG.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -466,6 +466,7 @@
 		ECF218142278D9A4008BD940 /* OrderPreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPreferenceViewController.swift; sourceTree = "<group>"; };
 		ECF2181C227900C2008BD940 /* NativeAdRendererManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAdRendererManager.swift; sourceTree = "<group>"; };
 		F216A91924BF4B4000BF8C93 /* Canary-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Canary-Bridging-Header.h"; sourceTree = "<group>"; };
+		F216A91A24BF61B400BF8C93 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		F28EDA5024BF49380013F7BC /* InMobiBannerCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InMobiBannerCustomEvent.h; sourceTree = "<group>"; };
 		F28EDA5124BF49380013F7BC /* InMobiRewardedCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InMobiRewardedCustomEvent.m; sourceTree = "<group>"; };
 		F28EDA5224BF49380013F7BC /* InMobiInterstitialCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InMobiInterstitialCustomEvent.m; sourceTree = "<group>"; };
@@ -475,7 +476,6 @@
 		F28EDA5624BF49380013F7BC /* InMobiBannerCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InMobiBannerCustomEvent.m; sourceTree = "<group>"; };
 		F28EDA5724BF49380013F7BC /* InMobiAdapterConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InMobiAdapterConfiguration.m; sourceTree = "<group>"; };
 		F28EDA5824BF49380013F7BC /* InMobiInterstitialCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InMobiInterstitialCustomEvent.h; sourceTree = "<group>"; };
-		F28EDA5924BF49380013F7BC /* CHANGELOG.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.txt; sourceTree = "<group>"; };
 		F28EDA5A24BF49380013F7BC /* InMobiGDPR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InMobiGDPR.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -979,7 +979,7 @@
 				F28EDA5524BF49380013F7BC /* InMobiRewardedCustomEvent.h */,
 				F28EDA5624BF49380013F7BC /* InMobiBannerCustomEvent.m */,
 				F28EDA5824BF49380013F7BC /* InMobiInterstitialCustomEvent.h */,
-				F28EDA5924BF49380013F7BC /* CHANGELOG.txt */,
+				F216A91A24BF61B400BF8C93 /* CHANGELOG.md */,
 				F28EDA5A24BF49380013F7BC /* InMobiGDPR.h */,
 			);
 			path = InMobi;
@@ -1148,7 +1148,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F28EDA7624BF49380013F7BC /* CHANGELOG.txt in Resources */,
+				F216A91D24BF61B400BF8C93 /* CHANGELOG.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1163,13 +1163,13 @@
 				BC2B97EA20F41D7800D58F79 /* AdUnitTableViewHeader.xib in Resources */,
 				BC4FE30A2208E90800B5D240 /* CollapsibleAdapterInfoTableViewCell.xib in Resources */,
 				BCB8CFB321C06230007F7F6C /* Assets.xcassets in Resources */,
+				F216A91B24BF61B400BF8C93 /* CHANGELOG.md in Resources */,
 				BC2CEFB9211CF14600EAA99D /* TextEntryTableViewCell.xib in Resources */,
 				BCB4DF2B211CB9C4005BD171 /* AdTableViewController.xib in Resources */,
 				BC3B0C9B2007DBC8002D28B1 /* TweetCollectionViewCell.xib in Resources */,
 				BC4CE2A2213733EB00CA0220 /* NativeAdCollectionViewController.xib in Resources */,
 				BCFE5B3B1FE446D600D760E9 /* AdUnitTableViewCell.xib in Resources */,
 				BC33E03E1FBB627B0060ECBE /* Main.storyboard in Resources */,
-				F28EDA7424BF49380013F7BC /* CHANGELOG.txt in Resources */,
 				BC4CE299213604DA00CA0220 /* NativeAdTableViewController.xib in Resources */,
 				BCB4DF31211CC27D005BD171 /* StatusTableViewCell.xib in Resources */,
 				BCF7095F1FBCCF50009A3981 /* SampleAds.plist in Resources */,
@@ -1194,9 +1194,9 @@
 				BC4CE2A3213733EB00CA0220 /* NativeAdCollectionViewController.xib in Resources */,
 				BC3B0C9C2007DBC8002D28B1 /* TweetCollectionViewCell.xib in Resources */,
 				BCFE5B3C1FE446D600D760E9 /* AdUnitTableViewCell.xib in Resources */,
+				F216A91C24BF61B400BF8C93 /* CHANGELOG.md in Resources */,
 				BCF6F7E421752DDF00FDE594 /* ReleaseTestingAds.plist in Resources */,
 				BC4CE29A213604DA00CA0220 /* NativeAdTableViewController.xib in Resources */,
-				F28EDA7524BF49380013F7BC /* CHANGELOG.txt in Resources */,
 				BCB4DF32211CC27D005BD171 /* StatusTableViewCell.xib in Resources */,
 				BC33E0531FBB63260060ECBE /* Main.storyboard in Resources */,
 				BC96A34120AE335C00AC3266 /* BasicMenuTableViewCell.xib in Resources */,
@@ -1210,7 +1210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F28EDA7724BF49380013F7BC /* CHANGELOG.txt in Resources */,
+				F216A91E24BF61B400BF8C93 /* CHANGELOG.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1218,7 +1218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F28EDA7824BF49380013F7BC /* CHANGELOG.txt in Resources */,
+				F216A91F24BF61B400BF8C93 /* CHANGELOG.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
