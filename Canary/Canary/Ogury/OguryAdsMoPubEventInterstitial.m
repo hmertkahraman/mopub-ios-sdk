@@ -26,25 +26,38 @@
 
 @implementation OguryAdsMoPubEventInterstitial
 
-#pragma mark - MPInterstitialCustomEvent Methods
-
 - (NSString *) getAdNetworkId {
     return _oguryAdUnitId;
 }
 
-- (void)requestInterstitialWithCustomEventInfo:(NSDictionary *)info adMarkup:(NSString *)adMarkup {
+#pragma mark - MPFullscreenAdAdapter Override
+
+- (BOOL)isRewardExpected {
+    return NO;
+}
+
+- (BOOL)hasAdAvailable {
+    return (self.oguryInterstitial && self.oguryInterstitial.isLoaded);
+}
+
+- (BOOL)enableAutomaticImpressionAndClickTracking
+{
+    return NO;
+}
+
+- (void)requestAdWithAdapterInfo:(NSDictionary *)info adMarkup:(NSString *)adMarkup {
     NSString * const oguryAssetId  = info[kOguryAssetIdKey];
     NSString * const oguryAdUnitId = info[kOguryAdUnitIdKey];
     
     NSError * oguryAssetIdError = [OguryAdsAdapterConfiguration validateParameter:oguryAssetId withName:kOguryAssetIdKey forOperation: @"interstitial ad request"];
     if (oguryAssetIdError) {
-        [self.delegate interstitialCustomEvent:self didFailToLoadAdWithError:oguryAssetIdError];
+        [self.delegate fullscreenAdAdapter:self didFailToLoadAdWithError:oguryAssetIdError];
         return;
     }
 
     NSError * oguryAdUnitIdError = [OguryAdsAdapterConfiguration validateParameter:oguryAdUnitId withName:kOguryAdUnitIdKey forOperation: @"interstitial ad request"];
     if (oguryAdUnitIdError) {
-        [self.delegate interstitialCustomEvent:self didFailToLoadAdWithError:oguryAdUnitIdError];
+        [self.delegate fullscreenAdAdapter:self didFailToLoadAdWithError:oguryAdUnitIdError];
         return;
     }
     self.oguryAdUnitId = oguryAdUnitId;
@@ -52,7 +65,7 @@
     if (![OguryAdsAdapterConfiguration isOgurySDKInitialized]) {
         [[OguryAds shared] setupWithAssetKey:oguryAssetId andCompletionHandler:^(NSError *oguryAdsInitializationError) {
             if (oguryAdsInitializationError) {
-                [self.delegate interstitialCustomEvent:self didFailToLoadAdWithError:oguryAdsInitializationError];
+                [self.delegate fullscreenAdAdapter:self didFailToLoadAdWithError:oguryAdsInitializationError];
             } else {
                 [OguryAdsAdapterConfiguration setIsOgurySDKInitialized:true];
                 [self requestOguryInterstitial];
@@ -72,13 +85,12 @@
     [self.oguryInterstitial load];
 }
 
-- (void)showInterstitialFromRootViewController:(UIViewController *)rootViewController {
+- (void)presentAdFromViewController:(UIViewController *)viewController {
     MPLogAdEvent([MPLogEvent adShowAttemptForAdapter:NSStringFromClass(self.class)],
                  [self getAdNetworkId]);
-
     
-    if (self.oguryInterstitial && self.oguryInterstitial.isLoaded) {
-        [self.oguryInterstitial showInViewController:rootViewController];
+    if ([self hasAdAvailable]) {
+        [self.oguryInterstitial showInViewController:viewController];
     } else {
         NSError *adNotAvailableError = [OguryAdsAdapterConfiguration createErrorWith:@"Failed to show Ogury Interstitial"
                                                                            andReason:@"Ad is not available"
@@ -86,13 +98,8 @@
         MPLogAdEvent([MPLogEvent adShowFailedForAdapter:NSStringFromClass(self.class) error:adNotAvailableError],
                      [self getAdNetworkId]);
         
-        [self.delegate interstitialCustomEvent:self didFailToLoadAdWithError:adNotAvailableError];
+        [self.delegate fullscreenAdAdapter:self didFailToLoadAdWithError:adNotAvailableError];
     }
-}
-
-// Override this method to return NO to perform impression and click tracking manually.
-- (BOOL)enableAutomaticImpressionAndClickTracking {
-    return NO;
 }
 
 #pragma mark - Ogury Ads Interstitial Delegate Methods
@@ -104,7 +111,7 @@
 - (void)oguryAdsInterstitialAdLoaded {
     MPLogAdEvent([MPLogEvent adLoadSuccessForAdapter:NSStringFromClass(self.class)],
                  [self getAdNetworkId]);
-    [self.delegate interstitialCustomEvent:self didLoadAd:nil];
+    [self.delegate fullscreenAdAdapterDidLoadAd:self];
 }
 
 - (void)oguryAdsInterstitialAdDisplayed {
@@ -112,14 +119,14 @@
                  [self getAdNetworkId]);
     MPLogAdEvent([MPLogEvent adDidAppearForAdapter:NSStringFromClass(self.class)],
                  [self getAdNetworkId]);
-    [self.delegate interstitialCustomEventDidAppear:self];
-    [self.delegate trackImpression];
+    [self.delegate fullscreenAdAdapterAdDidAppear:self];
+    [self.delegate fullscreenAdAdapterDidTrackImpression:self];
 }
 
 - (void)oguryAdsInterstitialAdClosed {
     MPLogAdEvent([MPLogEvent adDidDisappearForAdapter:NSStringFromClass(self.class)],
                  [self getAdNetworkId]);
-    [self.delegate interstitialCustomEventDidDisappear:self];
+    [self.delegate fullscreenAdAdapterAdDidDisappear:self];
 }
 
 - (void)oguryAdsInterstitialAdNotAvailable {
@@ -133,7 +140,7 @@
 - (void)oguryAdsInterstitialAdError:(OguryAdsErrorType)errorType {
     if (errorType == OguryAdsErrorAdExpired) {
         MPLogInfo(@"Ogury Interstitial has expired");
-        [self.delegate interstitialCustomEventDidExpire:self];
+        [self.delegate fullscreenAdAdapterDidExpire:self];
     } else {
         MOPUBErrorCode mopubErrorCode = [OguryAdsAdapterConfiguration getMoPubErrorCodeFromOguryAdsError:errorType];
         [self oguryAdsInterstitialAdFailure:mopubErrorCode];
@@ -145,7 +152,7 @@
     MPLogAdEvent([MPLogEvent adLoadFailedForAdapter:NSStringFromClass(self.class) error:(NSError*)error],
                  [self getAdNetworkId]);
     self.oguryInterstitial = nil;
-    [self.delegate interstitialCustomEvent:self didFailToLoadAdWithError:(NSError *)error];
+    [self.delegate fullscreenAdAdapter:self didFailToLoadAdWithError:(NSError *)error];
 }
 
 @end

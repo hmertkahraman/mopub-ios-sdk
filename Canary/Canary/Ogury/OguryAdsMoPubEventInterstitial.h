@@ -17,7 +17,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OguryAdsMoPubEventInterstitial : MPFullscreenAdAdapter <OguryAdsInterstitialDelegate>
+@interface OguryAdsMoPubEventInterstitial : MPFullscreenAdAdapter
 
 @end
 
