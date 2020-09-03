@@ -6,7 +6,7 @@ Sign up for an account at [http://app.mopub.com/](http://app.mopub.com/).
 
 ## Need Help?
 
-You can find integration documentation on our [developer help site](https://developers.mopub.com/publishers/ios/get-started/). Additional documentation can be found [here](https://www.mopub.com/resources/docs).
+You can find integration documentation on our [developer help site](https://developers.mopub.com/publishers/ios/get-started/).
 
 To file an issue with our team, email [support@mopub.com](mailto:support@mopub.com).
 
